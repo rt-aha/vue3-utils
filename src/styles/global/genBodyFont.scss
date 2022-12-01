@@ -1,0 +1,12 @@
+@use "@/styles/global/f.scss";
+@import "@/styles/global/vars/bodyFont";
+@mixin gen-body-font {
+  @each $key, $value in $body-font-guide {
+    .#{$key} {
+      font-size: f.to-rem(map-get($value, fs));
+      font-weight: map-get($value, fw);
+      line-height: map-get($value, lh);
+    }
+  }
+}
+@include gen-body-font

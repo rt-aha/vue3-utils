@@ -1,0 +1,221 @@
+// h1
+$h1-b-es: (
+  fs: 24,
+  lh: 140%,
+  fw: 700
+);
+$h1-b-sm: (
+  fs: 32,
+  lh: 140%,
+  fw: 700
+);
+$h1-b-mdlgxl: (
+  fs: 40,
+  lh: 130%,
+  fw: 700
+);
+$h1-m-es: (
+  fs: 24,
+  lh: 140%,
+  fw: 500
+);
+$h1-m-sm: (
+  fs: 32,
+  lh: 140%,
+  fw: 500
+);
+$h1-m-mdlgxl: (
+  fs: 40,
+  lh: 130%,
+  fw: 500
+);
+
+// h2
+$h2-b-smes: (
+  fs: 24,
+  lh: 140%,
+  fw: 700
+);
+$h2-b-mdlgxl: (
+  fs: 32,
+  lh: 140%,
+  fw: 700
+);
+$h2-m-smes: (
+  fs: 32,
+  lh: 140%,
+  fw: 500
+);
+$h2-m-mdlgxl: (
+  fs: 32,
+  lh: 140%,
+  fw: 500
+);
+
+// h3
+$h3-b-es: (
+  fs: 20,
+  lh: 150%,
+  fw: 700
+);
+$h3-b-smmdlgxl: (
+  fs: 24,
+  lh: 140%,
+  fw: 700
+);
+$h3-m-es: (
+  fs: 20,
+  lh: 150%,
+  fw: 500
+);
+$h3-m-smmdlgxl: (
+  fs: 24,
+  lh: 140%,
+  fw: 500
+);
+
+// h4
+$h4-b-es: (
+  fs: 18,
+  lh: 170%,
+  fw: 700
+);
+$h4-b-smmdlgxl: (
+  fs: 20,
+  lh: 150%,
+  fw: 700
+);
+$h4-m-es: (
+  fs: 18,
+  lh: 170%,
+  fw: 500
+);
+$h4-m-smmdlgxl: (
+  fs: 20,
+  lh: 140%,
+  fw: 500
+);
+$h4-r-es: (
+  fs: 18,
+  lh: 150%,
+  fw: 400
+);
+$h4-r-smmdlgxl: (
+  fs: 20,
+  lh: 170%,
+  fw: 400
+);
+
+// h5
+$h5-m-mdsmes: (
+  fs: 16,
+  lh: 170%,
+  fw: 500
+);
+$h5-m-xllg: (
+  fs: 18,
+  lh: 172%,
+  fw: 500
+);
+$h5-r-mdsmes: (
+  fs: 16,
+  lh: 170%,
+  fw: 400
+);
+$h5-r-xllg: (
+  fs: 18,
+  lh: 172%,
+  fw: 400
+);
+
+// config
+$font-guide: (
+  h1-b: (
+    init: $h1-b-es,
+    es: $h1-b-es,
+    sm: $h1-b-sm,
+    md: $h1-b-mdlgxl,
+    lg: $h1-b-mdlgxl,
+    xl: $h1-b-mdlgxl,
+  ),
+  h1-m: (
+    init: $h1-m-es,
+    es: $h1-m-es,
+    sm: $h1-m-sm,
+    md: $h1-m-mdlgxl,
+    lg: $h1-m-mdlgxl,
+    xl: $h1-m-mdlgxl,
+  ),
+  h2-b: (
+    init: $h2-b-smes,
+    es: $h2-b-smes,
+    sm: $h2-b-smes,
+    md: $h2-b-mdlgxl,
+    lg: $h2-b-mdlgxl,
+    xl: $h2-b-mdlgxl,
+  ),
+  h2-m: (
+    init: $h2-m-smes,
+    es: $h2-m-smes,
+    sm: $h2-m-smes,
+    md: $h2-m-mdlgxl,
+    lg: $h2-m-mdlgxl,
+    xl: $h2-m-mdlgxl,
+  ),
+  h3-b: (
+    init: $h3-b-es,
+    es: $h3-b-es,
+    sm: $h3-b-smmdlgxl,
+    md: $h3-b-smmdlgxl,
+    lg: $h3-b-smmdlgxl,
+    xl: $h3-b-smmdlgxl,
+  ),
+  h3-m: (
+    init: $h3-m-es,
+    es: $h3-m-es,
+    sm: $h3-m-smmdlgxl,
+    md: $h3-m-smmdlgxl,
+    lg: $h3-m-smmdlgxl,
+    xl: $h3-m-smmdlgxl,
+  ),
+  h4-b: (
+    init: $h4-b-es,
+    es: $h4-b-es,
+    sm: $h4-b-smmdlgxl,
+    md: $h4-b-smmdlgxl,
+    lg: $h4-b-smmdlgxl,
+    xl: $h4-b-smmdlgxl,
+  ),
+  h4-m: (
+    init: $h4-m-es,
+    es: $h4-m-es,
+    sm: $h4-m-smmdlgxl,
+    md: $h4-m-smmdlgxl,
+    lg: $h4-m-smmdlgxl,
+    xl: $h4-m-smmdlgxl,
+  ),
+  h4-r: (
+    init: $h4-r-es,
+    es: $h4-r-es,
+    sm: $h4-r-smmdlgxl,
+    md: $h4-r-smmdlgxl,
+    lg: $h4-r-smmdlgxl,
+    xl: $h4-r-smmdlgxl,
+  ),
+  h5-m: (
+    init: $h5-m-mdsmes,
+    es: $h5-m-mdsmes,
+    sm: $h5-m-mdsmes,
+    md: $h5-m-mdsmes,
+    lg: $h5-m-xllg,
+    xl: $h5-m-xllg,
+  ),
+  h5-r: (
+    init: $h5-r-mdsmes,
+    es: $h5-r-mdsmes,
+    sm: $h5-r-mdsmes,
+    md: $h5-r-mdsmes,
+    lg: $h5-r-xllg,
+    xl: $h5-r-xllg,
+  ),
+);

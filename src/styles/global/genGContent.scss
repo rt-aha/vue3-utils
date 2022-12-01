@@ -1,0 +1,25 @@
+@use "@/styles/global/f.scss";
+@use "@/styles/global/m.scss";
+@import "@/styles/global/vars/breakpoints";
+@function max-width($name) {
+  $mg: f.break-point(#{$name}-margin);
+  $val: calc(100% - #{$mg}px * 2);
+  @return $val;
+}
+@mixin gen-g-content {
+  @each $name in $break-point-name-list {
+    @include m.rwd($name) {
+      .gContent {
+        // padding: 0 20px;
+        // width: 100%;
+        width: max-width($name);
+      }
+    }
+  }
+
+  .gContent {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+@include gen-g-content;

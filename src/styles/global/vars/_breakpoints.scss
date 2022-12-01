@@ -1,0 +1,28 @@
+$break-point-name-list: (
+  init, es, sm, md, lg, xl
+);
+$break-point-mapping: (
+  // init
+  init: 320px,
+  init-margin: 24,
+
+  // es
+  es: 375px,
+  es-margin: 24,
+
+  // sm
+  sm: 720px,
+  sm-margin: 40,
+  
+  // md
+  md: 1024px,
+  md-margin: 64,
+  
+  // lg
+  lg: 1280px,
+  lg-margin: 80,
+
+  // xl
+  xl: 1440px,
+  xl-margin: 24,
+);

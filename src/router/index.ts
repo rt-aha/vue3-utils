@@ -1,15 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-
 const modules = import.meta.glob('./pages/*.ts', { eager: true });
 const allRoutes = [];
 for (const path in modules) {
   allRoutes.push(modules[path].default);
 }
 
-console.log(`output->allRoutes`,allRoutes)
-
-// console.log('routes..', pages);
+// console.log(`output->allRoutes`,allRoutes)
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,7 +16,7 @@ const router = createRouter({
       name: 'home',
       component: () => import(/* webpackChunkName: "Home" */ '@/views/Home.vue'),
     },
-    ...allRoutes
+    ...allRoutes,
   ],
 });
 
@@ -35,6 +32,6 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-console.log(`output->router`,router.getRoutes())
+console.log('output->router', router.getRoutes());
 
 export default router;

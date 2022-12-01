@@ -1,0 +1,32 @@
+// config
+@import "./vars/color";
+@import "./vars/zIndex";
+@import "./vars/breakpoints";
+
+// gContent with all breakpoint
+@import "./genGContent";
+
+// generate font with all breakpoint
+@import "./genFont";
+
+// generate body font with all breakpoint
+@import "./genBodyFont";
+
+
+// generate root variables
+:root {
+  // colors
+  @each $name, $val in $color-mapping {
+    --color-#{"" + $name}: #{$val};
+  }
+
+  // z-index
+  @each $name, $val in $z-index-mapping {
+    --z-index-#{"" + $name}: #{$val};
+  }
+
+  // breakpoint
+  @each $name, $val in $break-point-mapping {
+    --breakpoint-#{"" + $name}: #{$val};
+  }
+}

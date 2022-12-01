@@ -1,3 +1,36 @@
 {
-  "recommendations": ["Vue.volar", "Vue.vscode-typescript-vue-plugin"]
+  "recommendations": [
+    // html
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+
+    // scss
+    "sibiraj-s.vscode-scss-formatter",
+    "glenn2223.live-sass",
+
+    // javascript
+    "mgmcdermott.vscode-language-babel",
+    "dbaeumer.vscode-eslint",
+
+    // typescript
+
+    // vue
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+
+    // react
+    
+    // graphql
+    "GraphQL.vscode-graphql-syntax",
+    
+    // tool
+    "eamodio.gitlens",
+    "yzhang.markdown-all-in-one",
+    "jock.svg",
+    "Compulim.vscode-chinese-translation",
+    "yoyoys.fake-img-snippet-collection",
+
+    // theme
+    "zhuangtongfa.material-theme"
+  ],
 }

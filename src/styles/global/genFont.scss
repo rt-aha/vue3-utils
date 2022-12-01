@@ -1,0 +1,31 @@
+@use "@/styles/global/f.scss";
+@use "@/styles/global/m.scss";
+@import "@/styles/global/vars/font";
+
+// @function get-font-value($keys...) {
+//   $value: $font-guide;
+//   @each $key in $keys {
+//     $value: map-get($value, $key);
+//   }
+//   @return $value;
+// }
+@mixin gen-font {
+  @each $key, $value in $font-guide {
+    // $v: $key;
+    @each $key2, $value2 in $value {
+      @include m.rwd($key2) {
+        .#{$key} {
+          font-size: f.to-rem(f.get-font-value($key, $key2, fs));
+          font-weight: f.get-font-value($key, $key2, fw);
+          line-height: f.get-font-value($key, $key2, lh);
+        }
+      }
+    }
+
+    // 固定都 0.01em
+    .#{$key} {
+      letter-spacing: 0.01em;
+    }
+  }
+}
+@include gen-font;

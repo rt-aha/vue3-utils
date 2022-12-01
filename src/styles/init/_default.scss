@@ -1,0 +1,61 @@
+@use "@/styles/global/f.scss";
+@use "@/styles/global/m.scss";
+
+html {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-size: 16px !important; // set for rem base
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-family:
+    sans-serif,
+    "PingFang TC",
+    "Microsoft JhengHei",
+    "微軟正黑體",
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+#__next {
+  width: 100%;
+  height: 100%;
+}
+
+// 阻擋下拉使瀏覽器重整
+// .prevent-scroll-reload {
+//   overscroll-behavior-y: contain;
+// }
+
+// for developer
+// * {
+// outline: 1px solid rgba($c-main, 0.3);
+// }
+
+img {
+  vertical-align: bottom;
+}
+
+// 無障礙 ::: 使用
+.acc-main-anchor {
+  position: relative;
+}
+
+a {
+  outline: 0 transparent;
+
+  &:focus {
+    // outline: 2px dotted f.color(accessibility);
+    outline: 1px dashed f.color(focus);
+  }
+}
+
+// for dev
+// * {
+//   outline: 1px solid #f00;
+// }

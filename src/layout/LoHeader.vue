@@ -1,6 +1,6 @@
 <template>
-  <div class="base-layout">
-    <RouterView />
+  <div class="lo-header">
+    LoHeader
   </div>
 </template>
 

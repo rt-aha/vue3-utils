@@ -1,0 +1,49 @@
+@use "@/styles/global/f.scss";
+@use "@/styles/global/m.scss";
+
+// AtSlider
+.slick-cus-dots {
+  @include m.position(bl, -20px, 50%);
+  transform: translateX(-50%);
+
+  li {
+    display: inline-block;
+  }
+
+  li + li {
+    margin-left: 24px;
+  }
+
+  &--home-records {
+    bottom: -40px;
+  }
+}
+
+.cus-dot {
+  @include m.circle(4px);
+  text-align: center;
+  background-color: f.color(g700);
+
+  &--white {
+    background-color: f.color(white);
+  }
+}
+
+.slick-active {
+  .cus-dot {
+    position: relative;
+
+    &::after {
+      @include m.circle(12px);
+      @include m.position(center);
+      content: "";
+      border: 1px solid f.color(g700);
+    }
+
+    &--white {
+      &::after {
+        border-color: f.color(white);
+      }
+    }
+  }
+}

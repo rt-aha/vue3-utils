@@ -1,0 +1,31 @@
+// f stand for function
+@import "./vars/color";
+@import "./vars/font";
+@import "./vars/zIndex";
+@import "./vars/breakpoints";
+
+// get variable
+@function color($key) {
+  $value: map-get($color-mapping, $key);
+  @return $value;
+}
+@function z-index($key) {
+  $value: map-get($z-index-mapping, $key);
+  @return $value;
+}
+@function break-point($key) {
+  $value: map-get($break-point-mapping, $key);
+  @return $value;
+}
+
+// utils
+@function to-rem($fs: 16) {
+  @return calc(#{$fs}rem / 16);
+}
+@function get-font-value($keys...) {
+  $value: $font-guide;
+  @each $key in $keys {
+    $value: map-get($value, $key);
+  }
+  @return $value;
+}

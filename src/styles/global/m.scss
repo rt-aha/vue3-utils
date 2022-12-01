@@ -1,0 +1,148 @@
+@use "@/styles/global/f.scss";
+@import "@/styles/global/vars/font";
+@import "@/styles/global/vars/breakpoints";
+@import "@/styles/global/vars/bodyFont";
+
+// rwd
+@mixin rwd($breakpoint) {
+  @media screen and (min-width: f.break-point($breakpoint)) {
+    @content;
+  }
+}
+
+// 字
+// 參數 顏色, 字體大小, 字體粗細, 字距
+@mixin font-style($c: #000, $fs: 16, $fw: 400, $ls: normal, $lh: normal) {
+  font-size: f.to-rem($fs);
+  font-weight: $fw;
+  line-height: $lh;
+  color: $c;
+  letter-spacing: $ls;
+}
+@mixin max-width($w, $isCenter: true) {
+  width: 100%;
+  max-width: $w + px;
+  @if $isCenter == true {
+    margin: 0 auto;
+  }
+}
+@mixin font-size($fs: 16) {
+  font-size: f.to-rem($fs);
+}
+@mixin padding($padding) {
+  box-sizing: border-box;
+  padding: $padding;
+}
+@mixin flex($js: flex-start, $ai: center, $fd: row) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $js;
+}
+@mixin inline-flex($js: flex-start, $ai: center, $fd: row) {
+  display: inline-flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $js;
+}
+@mixin position($type: center, $tb: 0, $lr: 0) {
+  @if $type == center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @if $type == tl {
+    position: absolute;
+    top: $tb;
+    left: $lr;
+  }
+  @if $type == tr {
+    position: absolute;
+    top: $tb;
+    right: $lr;
+  }
+  @if $type == bl {
+    position: absolute;
+    bottom: $tb;
+    left: $lr;
+  }
+  @if $type == br {
+    position: absolute;
+    bottom: $tb;
+    right: $lr;
+  }
+}
+@mixin cus-radius($tl, $tr, $br, $bl) {
+  border-top-left-radius: $tl;
+  border-top-right-radius: $tr;
+  border-bottom-right-radius: $br;
+  border-bottom-left-radius: $bl;
+}
+@mixin circle($wh: 10px, $r: 50%) {
+  width: $wh;
+  height: $wh;
+  border-radius: $r;
+}
+
+// 行數省略
+@mixin word-ellipsis($row: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+}
+
+// 行數復原
+@mixin word-ellipsis-unlimited() {
+  overflow: visible;
+  text-overflow: clip;
+  -webkit-line-clamp: none;
+  -webkit-box-orient: inline-axis;
+}
+
+// safari 不支持 flex: 1 簡寫
+@mixin flex1() {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+// 圖片銳利化
+@mixin optimizeImage() {
+  image-rendering: -o-crisp-edges;
+  image-rendering: optimize-contrast;
+  image-rendering: crisp-edges;
+  interpolation-mode: nearest-neighbor;
+}
+
+// 網格背景
+@mixin frameBg() {
+  background-image:
+    linear-gradient(f.color(g100), 1px, transparent 0),
+    linear-gradient(90deg, f.color(g100), 1px, transparent 0);
+  background-size: 20% 100%;
+}
+
+// 刪除 button 所有預設
+@mixin plain-btn() {
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0 transparent;
+  outline: 0  transparent;
+}
+@mixin get-font($type, $breakpoint) {
+  font-size: f.to-rem(f.get-font-value($type, $breakpoint, fs));
+  font-weight: f.get-font-value($type, $breakpoint, fw);
+  line-height: f.get-font-value($type, $breakpoint, lh);
+  letter-spacing: 0.01em;
+}
+@mixin get-body-font($type) {
+  font-size: f.to-rem(map-get(map-get($body-font-guide, $type), fs));
+  font-weight: map-get(map-get($body-font-guide, $type), fw);
+  line-height: map-get(map-get($body-font-guide, $type), lh);
+  letter-spacing: 0.01em;
+}

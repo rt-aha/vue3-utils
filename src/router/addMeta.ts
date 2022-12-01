@@ -1,10 +1,6 @@
-interface IAddMeta {
-  children: any[],
-  key: string,
-  data: string
-}
+import type { RouteRecordRaw } from 'vue-router';
 
-const addMeta: (children: any[], key: string, data: string) => any = (children, key, data) => {
+const addMeta = (children: RouteRecordRaw[], key: string, data: string): RouteRecordRaw[] => {
   return children.map((item) => {
     const meta = item.meta || {};
 
