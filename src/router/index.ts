@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 
 const modules = import.meta.glob('./pages/*.ts', { eager: true });
 const allRoutes = [];
@@ -8,16 +9,22 @@ for (const path in modules) {
 
 // console.log(`output->allRoutes`,allRoutes)
 
+const routes: RouteRecordRaw[] = [
+  {
+    path: '',
+    name: 'home',
+    component: () => import(/* webpackChunkName: "Home" */ '@/views/Home.vue'),
+    meta: {
+      title: '首頁',
+      showInMenu: false,
+    },
+  },
+  ...allRoutes,
+];
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '',
-      name: 'home',
-      component: () => import(/* webpackChunkName: "Home" */ '@/views/Home.vue'),
-    },
-    ...allRoutes,
-  ],
+  routes,
 });
 
 router.beforeEach((to, from, next) => {
@@ -35,3 +42,4 @@ router.beforeEach((to, from, next) => {
 console.log('output->router', router.getRoutes());
 
 export default router;
+export { routes };

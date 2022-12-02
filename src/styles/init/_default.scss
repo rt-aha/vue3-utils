@@ -22,7 +22,7 @@ body {
     sans-serif;
 }
 
-#__next {
+#app {
   width: 100%;
   height: 100%;
 }
@@ -42,18 +42,18 @@ img {
 }
 
 // 無障礙 ::: 使用
-.acc-main-anchor {
-  position: relative;
-}
+// .acc-main-anchor {
+//   position: relative;
+// }
 
-a {
-  outline: 0 transparent;
+// a {
+//   outline: 0 transparent;
 
-  &:focus {
-    // outline: 2px dotted f.color(accessibility);
-    outline: 1px dashed f.color(focus);
-  }
-}
+//   &:focus {
+//     // outline: 2px dotted f.color(accessibility);
+//     outline: 1px dashed f.color(focus);
+//   }
+// }
 
 // for dev
 // * {

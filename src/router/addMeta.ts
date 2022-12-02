@@ -1,6 +1,14 @@
 import type { RouteRecordRaw } from 'vue-router';
 
-const addMeta = (children: RouteRecordRaw[], key: string, data: string): RouteRecordRaw[] => {
+// const addMeta = () => {
+
+// };
+
+interface Imeta {
+  category: string
+}
+
+export const addChildrenMeta = (children: RouteRecordRaw[], metaData: Imeta): RouteRecordRaw[] => {
   return children.map((item) => {
     const meta = item.meta || {};
 
@@ -8,10 +16,8 @@ const addMeta = (children: RouteRecordRaw[], key: string, data: string): RouteRe
       ...item,
       meta: {
         ...meta,
-        [key]: data,
+        ...metaData,
       },
     };
   });
 };
-
-export default addMeta;

@@ -1,6 +1,6 @@
 import { URL, fileURLToPath } from 'url';
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 
@@ -50,11 +50,11 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "@/styles/global/m.scss";',
+        additionalData: '@import "@/styles/global/m.scss"; @import "@/styles/global/f.scss";',
       },
     },
   },
   server: {
     port: 8312,
   },
-})
+});
