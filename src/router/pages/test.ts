@@ -1,7 +1,7 @@
-import type { RouteRecordRaw } from 'vue-router';
 import { addChildrenMeta } from '@/router/addMeta';
+import type { RouteRecordRawWithMeta } from '@/interface/router';
 
-const children: RouteRecordRaw[] = [
+const children: RouteRecordRawWithMeta[] = [
   {
     path: 't',
     name: 't',
@@ -13,7 +13,7 @@ const children: RouteRecordRaw[] = [
   },
 ];
 
-const routes: RouteRecordRaw = {
+const routes: RouteRecordRawWithMeta = {
   path: '/test',
   name: 'test',
   component: () => import(/* webpackChunkName: "Baselayout" */ '@/layout/Lo.vue'),

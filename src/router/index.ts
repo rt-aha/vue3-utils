@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import type { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRawWithMeta } from '@/interface/router';
 
 const modules = import.meta.glob('./pages/*.ts', { eager: true });
 const allRoutes = [];
@@ -9,7 +9,7 @@ for (const path in modules) {
 
 // console.log(`output->allRoutes`,allRoutes)
 
-const routes: RouteRecordRaw[] = [
+const routes: RouteRecordRawWithMeta[] = [
   {
     path: '',
     name: 'home',

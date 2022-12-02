@@ -23,7 +23,7 @@
                       :class="{ 'body3-b': route.name === subMenu.name }"
                       :to="{ name: subMenu.name }"
                     >
-                      {{ subMenu.meta.title }} {{ route.name === subMenu.name ? 't' : 'f' }}
+                      {{ subMenu.meta!.title }}
                     </router-link>
                   </li>
                 </ul>
@@ -55,8 +55,7 @@ const menuList = computed(() => {
     return route.meta.showInMenu;
   }).map((route) => {
     route.children = route.children?.filter((subRoute) => {
-      console.log('?', subRoute);
-      return subRoute.meta.showInMenu;
+      return subRoute.meta!.showInMenu;
     });
     console.log('route', route);
 
