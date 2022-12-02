@@ -3,11 +3,11 @@ import addMeta from '@/router/addMeta';
 
 const children: RouteRecordRaw[] = [
   {
-    path: 'camel-case-to-kebaba-case',
-    name: 'camel-case-to-kebaba-case',
-    component: () => import(/* webpackChunkName: "CamelCaseToKebabCase" */ '@/views/common/CamelCaseToKebabCase.vue'),
+    path: 'variable-name-convert',
+    name: 'variable-name-convert',
+    component: () => import(/* webpackChunkName: "VariableNameConvert" */ '@/views/common/VariableNameConvert.vue'),
     meta: {
-      title: 'CamelCaseToKebabCase',
+      title: '變數命名規則轉換',
     },
   },
   {

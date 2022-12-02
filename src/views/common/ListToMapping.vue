@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { listToMapping, optionsToMapping } from '@/utils/global';
+import { listToMapping, optionsToMapping } from '@/utils/listToMapping';
 import { fruitOptions } from '@/testData/global';
 
 console.log('listToMapping...', listToMapping(fruitOptions, 'value'));
