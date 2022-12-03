@@ -142,7 +142,7 @@ const cusStorage: Omit<IStorage, 'getItem' | 'prefix'> = {
 };
 
 export {
-  cusLocalStorage, // 針對 localStorage 操作
-  cusSessionStorage, // 針對 sessionStorage 操作
+  cusLocalStorage, // 對 localStorage 操作
+  cusSessionStorage, // 對 sessionStorage 操作
   cusStorage, // 同時對 localStorage 和 sessionStorage 操作
 };

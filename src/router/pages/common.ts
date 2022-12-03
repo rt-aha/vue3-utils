@@ -38,6 +38,15 @@ const children: RouteRecordRawWithMeta[] = [
       showInMenu: true,
     },
   },
+  {
+    path: 'validate',
+    name: 'validate',
+    component: () => import(/* webpackChunkName: "Validate" */ '@/views/common/Validate.vue'),
+    meta: {
+      title: '驗證',
+      showInMenu: true,
+    },
+  },
 ];
 
 const routes: RouteRecordRawWithMeta = {
