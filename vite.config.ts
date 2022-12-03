@@ -1,5 +1,6 @@
 import { URL, fileURLToPath } from 'url';
-import { defineConfig } from 'vite';
+// import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
@@ -56,5 +57,10 @@ export default defineConfig({
   },
   server: {
     port: 8312,
+  },
+  test: {
+    // 在這邊加入設定
+    // include: ['**/*.spec.js'],
+    // environment: 'jsdom',
   },
 });
