@@ -87,7 +87,7 @@ defineExpose({});
       width: 280px;
       height: 100%;
       background-color: color(g50);
-      @include padding(20px 20px 20px 0px);
+      // @include padding(20px 20px 20px 0px);
       @include flex(flex-start, flex-start);
 
     }
@@ -101,10 +101,13 @@ defineExpose({});
 
 .title {
   writing-mode: vertical-lr;
+  background-color: color(g200);
+  height: 100%;
+  @include padding(20px 0px);
 }
 
 .menu {
-  @include padding(0 0 0 10px);
+  @include padding(20px 10px);
 }
 
 .route-list {
