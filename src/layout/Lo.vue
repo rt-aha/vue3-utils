@@ -57,7 +57,6 @@ const menuList = computed(() => {
     route.children = route.children?.filter((subRoute) => {
       return subRoute.meta!.showInMenu;
     });
-    console.log('route', route);
 
     return route;
   });

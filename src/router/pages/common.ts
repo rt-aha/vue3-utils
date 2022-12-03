@@ -29,6 +29,15 @@ const children: RouteRecordRawWithMeta[] = [
       showInMenu: true,
     },
   },
+  {
+    path: 'mapping',
+    name: 'mapping',
+    component: () => import(/* webpackChunkName: "Mapping" */ '@/views/common/Mapping.vue'),
+    meta: {
+      title: '操作物件，設值/取值',
+      showInMenu: true,
+    },
+  },
 ];
 
 const routes: RouteRecordRawWithMeta = {
