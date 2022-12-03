@@ -60,7 +60,11 @@ export default defineConfig({
   },
   test: {
     // 在這邊加入設定
-    // include: ['**/*.spec.js'],
-    // environment: 'jsdom',
+    include: ['**/*.spec.js'],
+    environment: 'jsdom',
+    coverage: {
+      reporter: ['text', 'json', 'html'],
+    },
+
   },
 });
