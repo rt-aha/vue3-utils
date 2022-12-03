@@ -12,8 +12,10 @@ interface IStorage {
   clear: (options?: { callback?: Function }) => void
 }
 
+const prefix = 'cus_';
+
 const cusLocalStorage: IStorage = {
-  prefix: 'cus_',
+  prefix,
   setItem(key, val, options = {}) {
     const jsonVal = JSON.stringify(val);
     localStorage.setItem(`${this.prefix}${key}`, jsonVal);
@@ -59,7 +61,7 @@ const cusLocalStorage: IStorage = {
 };
 
 const cusSessionStorage: IStorage = {
-  prefix: 'cus_',
+  prefix,
   setItem(key, val, options = {}) {
     const jsonVal = JSON.stringify(val);
     sessionStorage.setItem(`${this.prefix}${key}`, jsonVal);
@@ -104,8 +106,7 @@ const cusSessionStorage: IStorage = {
   },
 };
 
-const cusStorage: Omit<IStorage, 'getItem'> = {
-  prefix: 'cus_',
+const cusStorage: Omit<IStorage, 'getItem' | 'prefix'> = {
   setItem(key: string, val: itemValueType, options = {}) {
     cusSessionStorage.setItem(key, val);
     cusLocalStorage.setItem(key, val);
