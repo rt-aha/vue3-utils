@@ -20,6 +20,15 @@ const children: RouteRecordRawWithMeta[] = [
       showInMenu: true,
     },
   },
+  {
+    path: 'add-commas',
+    name: 'add-commas',
+    component: () => import(/* webpackChunkName: "AddCommas" */ '@/views/common/AddCommas.vue'),
+    meta: {
+      title: '數字加千分為逗號',
+      showInMenu: true,
+    },
+  },
 ];
 
 const routes: RouteRecordRawWithMeta = {

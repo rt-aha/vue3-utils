@@ -5,7 +5,7 @@ type itemValueType = basicType | basicType[];
 interface IStorage {
   prefix: string
   setItem: (key: string, val: itemValueType, options?: { callback?: Function }) => void
-  getItem: (key: string) => void
+  getItem: (key: string) => any
   removeItem: (key: string, options?: { callback?: Function }) => void
   removeListOfItem: (keyList: string[]) => void
   removeExcludeListOfItem: (keyList: string[]) => void
