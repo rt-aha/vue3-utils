@@ -39,7 +39,7 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-console.log('output->router', router.getRoutes());
+// console.log('all router', router.getRoutes());
 
 export default router;
 export { routes };

@@ -10,7 +10,7 @@ const addCommas = (val: number) => {
     return `${integer.replace(regexp, '$&,')}.${decimal}`;
   }
 
-  return valueStr.replace(regexp, '$&');
+  return valueStr.replace(regexp, '$&,');
 };
 
 export default addCommas;

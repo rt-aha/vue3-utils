@@ -46,7 +46,7 @@ const routes: RouteRecordRawWithMeta = {
   component: () => import(/* webpackChunkName: "Lo" */ '@/layout/Lo.vue'),
   children: addChildrenMeta(children, { category: 'common' }),
   meta: {
-    title: '通用',
+    title: '常用',
     showInMenu: true,
   },
 };
