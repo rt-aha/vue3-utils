@@ -95,6 +95,7 @@ defineExpose({});
     &__content {
       flex: 1;
 
+        @include padding(20px);
     }
   }
 }

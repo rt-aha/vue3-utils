@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Lo: typeof import('./src/layout/Lo.vue')['default']
     LoHeader: typeof import('./src/layout/LoHeader.vue')['default']
+    ReButton: typeof import('./src/components/global/ReButton.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

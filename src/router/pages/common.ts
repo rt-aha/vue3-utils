@@ -21,15 +21,6 @@ const children: RouteRecordRawWithMeta[] = [
     },
   },
   {
-    path: 'add-commas',
-    name: 'add-commas',
-    component: () => import(/* webpackChunkName: "AddCommas" */ '@/views/common/AddCommas.vue'),
-    meta: {
-      title: '數字加千分為逗號',
-      showInMenu: true,
-    },
-  },
-  {
     path: 'mapping',
     name: 'mapping',
     component: () => import(/* webpackChunkName: "Mapping" */ '@/views/common/Mapping.vue'),
